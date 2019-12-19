@@ -1,3 +1,38 @@
 page-home {
+    
+    .scroll-content{
+        #home-button4 {
+            background-color: #33CD5F;
+        }
+        ion-icon{
+            color: #33CD5F;
+        }
+        ion-card{
+            border:1px solid #f0f0f0;
+        }
+        .searchbar-ios {
+            background: none;
+            border:1px solid #f0f0f0;
+        }
+        .show-list-numbers-and-dots ion-icon{
+            color:#FFC83D;
+        }
+        .item-ios{
+            border-top:1px solid #f0f0f0;
+            border-bottom:1px solid #f0f0f0;
+        }
+        .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+            border-bottom: none;
+        }
+        ion-card{
+            margin-right: 0;
+            margin-left: 0;
+            width: auto;
+        }
+        ion-list ion-item:nth-child(2) ion-label{
+            display: flex;
+            justify-content: space-between;
+        }
+    }     
 
 }
