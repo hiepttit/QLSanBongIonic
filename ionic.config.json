@@ -1,5 +1,7 @@
 {
   "name": "ATM",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { PitchProvider } from '../../providers/PitchProvider';
 
 @Component({
   selector: 'page-detail',
   templateUrl: 'detail.html'
 })
 export class DetailPage {
-
-  constructor(public navCtrl: NavController) {
+  private data;
+  private lstSmallPitch;
+  constructor(public navCtrl: NavController,navParams: NavParams,public pitchProvider:PitchProvider) {
+    this.data = navParams.get('data');
   }
-  
+  ionViewWillEnter(){
+    console.log(this.data);
+    this.getListSmallPitch();
+  }
+  private async getListSmallPitch(){
+    this.lstSmallPitch = await this.pitchProvider.getListSmallPitch(this.data.id);
+  }
 }

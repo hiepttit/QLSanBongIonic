@@ -7,10 +7,16 @@ import { HomePage } from '../pages/home/home';
 import { SearchPage } from '../pages/search/search';
 import { DetailPage } from '../pages/detail/detail';
 import { BookingPage } from '../pages/booking/booking';
+import { IonicStorageModule } from '@ionic/storage';
 
+
+import { UserProvider } from '../providers/UserProvider';
+import { BaseServiceProvider } from '../providers/BaseServiceProvider';
+import { PitchProvider } from '../providers/PitchProvider';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +45,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpModule,
+    UserProvider,
+    BaseServiceProvider,
+    PitchProvider
   ]
 })
 export class AppModule {}
