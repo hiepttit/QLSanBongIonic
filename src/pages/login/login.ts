@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 import { SearchPage } from '../search/search';
 import { DetailPage } from '../detail/detail';
 import { BookingPage } from '../booking/booking';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-login',
+  templateUrl: 'login.html'
 })
-export class HomePage {
+export class LoginPage {
 
   constructor(public navCtrl: NavController) {
   }
-  goToSearch(params){
+  goToHome(params){
+    if (!params) params = {};
+    this.navCtrl.push(HomePage);
+  }goToSearch(params){
     if (!params) params = {};
     this.navCtrl.push(SearchPage);
   }goToDetail(params){

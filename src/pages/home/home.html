@@ -1,14 +1,161 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding id="page2">
+  <h2 id="home-heading2" style="color:#000000;">
+    Bạn đang ở Đà Lạt?
+  </h2>
+  <div id="home-markdown1" class="show-list-numbers-and-dots">
+    <p style="color:#000000;">
+      Tìm và đặt sân chưa bao giờ
+      <strong>
+        dễ dàng
+      </strong>
+      đến thế.
+    </p>
+  </div>
+  <form id="home-form1">
+    <ion-searchbar placeholder="Nhập tên sân hoặc địa chỉ ..." name="" id="home-search1"></ion-searchbar>
+  </form>
+  <button id="home-button4" ion-button color="balanced" block on-click="goToSearch()">
+    Tìm ngay
+  </button>
+  <h3 id="home-heading3" style="color:#000000;">
+    Gần đây
+  </h3>
+  <ion-card id="home-card21">
+    <ion-list>
+      <ion-item color="dark" on-click="goToDetail()" id="home-list-item8">
+        <ion-thumbnail item-left>
+          <img src="assets/img/AUKep1mwQSz620ARGqbt_foody-mobile-10-jpg-367-635973698509531205.jpg" />
+        </ion-thumbnail>
+        <h2>
+          Sân 7B
+        </h2>
+        <p style="white-space:normal;">7B Phù Đổng Thiên Vương</p>
+        <ion-icon name="football" item-right style="color: #000000;"></ion-icon>
+      </ion-item>
+      <ion-item id="home-list-item-container3">
+        <div id="home-markdown5" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#707070;">
+            120.000đ/giờ
+          </p>
+        </div>
+        <div id="home-markdown6" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#FF9900;">
+            🌟🌟🌟
+          </p>
+        </div>
+      </ion-item>
+      <ion-item color="balanced" on-click="goToBooking()" id="home-list-item9">
+        <ion-icon name="calendar" item-left></ion-icon>
+        Xem lịch
+        <ion-note item-right></ion-note>
+        <ion-icon name="add-circle" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card id="home-card22">
+    <ion-list>
+      <ion-item color="dark" on-click="goToDetail()" id="home-list-item10">
+        <ion-thumbnail item-left>
+          <img src="assets/img/AUKep1mwQSz620ARGqbt_foody-mobile-10-jpg-367-635973698509531205.jpg" />
+        </ion-thumbnail>
+        <h2>
+          Sân Hồ Bơi
+        </h2>
+        <p style="white-space:normal;">Trần Nhân Tông</p>
+        <ion-icon name="football" item-right style="color: #000000;"></ion-icon>
+      </ion-item>
+      <ion-item id="home-list-item-container4">
+        <div id="home-markdown7" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#707070;">
+            120.000đ/giờ
+          </p>
+        </div>
+        <div id="home-markdown8" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#FF9900;">
+            🌟🌟🌟🌟
+          </p>
+        </div>
+      </ion-item>
+      <ion-item color="balanced" on-click="goToBooking()" id="home-list-item11">
+        <ion-icon name="calendar" item-left></ion-icon>
+        Xem lịch
+        <ion-note item-right></ion-note>
+        <ion-icon name="add-circle" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <h3 id="home-heading4" style="color:#000000;">
+    Sân đặt nhiều
+  </h3>
+  <ion-card id="home-card23">
+    <ion-list>
+      <ion-item color="dark" on-click="goToDetail()" id="home-list-item12">
+        <ion-thumbnail item-left>
+          <img src="assets/img/AUKep1mwQSz620ARGqbt_foody-mobile-10-jpg-367-635973698509531205.jpg" />
+        </ion-thumbnail>
+        <h2>
+          Sân 7B
+        </h2>
+        <p style="white-space:normal;">7B Phù Đổng Thiên Vương</p>
+        <ion-icon name="football" item-right style="color: #000000;"></ion-icon>
+      </ion-item>
+      <ion-item id="home-list-item-container5">
+        <div id="home-markdown9" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#707070;">
+            120.000đ/giờ
+          </p>
+        </div>
+        <div id="home-markdown10" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#FF9900;">
+            🌟🌟
+          </p>
+        </div>
+      </ion-item>
+      <ion-item color="balanced" on-click="goToBooking()" id="home-list-item13">
+        <ion-icon name="calendar" item-left></ion-icon>
+        Xem lịch
+        <ion-note item-right></ion-note>
+        <ion-icon name="add-circle" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card id="home-card24">
+    <ion-list>
+      <ion-item color="dark" on-click="goToDetail()" id="home-list-item14">
+        <ion-thumbnail item-left>
+          <img src="assets/img/AUKep1mwQSz620ARGqbt_foody-mobile-10-jpg-367-635973698509531205.jpg" />
+        </ion-thumbnail>
+        <h2>
+          Sân 7B
+        </h2>
+        <p style="white-space:normal;">7B Phù Đổng Thiên Vương</p>
+        <ion-icon name="football" item-right style="color: #000000;"></ion-icon>
+      </ion-item>
+      <ion-item id="home-list-item-container6">
+        <div id="home-markdown11" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#707070;">
+            120.000đ/giờ
+          </p>
+        </div>
+        <div id="home-markdown12" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#FF9900;">
+            🌟🌟🌟
+          </p>
+        </div>
+      </ion-item>
+      <ion-item color="balanced" on-click="goToBooking()" id="home-list-item15">
+        <ion-icon name="calendar" item-left></ion-icon>
+        Xem lịch
+        <ion-note item-right></ion-note>
+        <ion-icon name="add-circle" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>
