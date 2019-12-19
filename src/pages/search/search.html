@@ -44,35 +44,21 @@
             <p style="color:#000000;font-size:18px;">
               Tìm thấy
               <strong>
-                3
+                {{data.length}}
               </strong>
               sân bóng!
             </p>
           </div>
-          <ion-item color="none" id="search-list-item17">
-            <ion-thumbnail item-left>
-              <img />
-            </ion-thumbnail>
-            <h2>
-              Item
-            </h2>
-          </ion-item>
-          <ion-item color="none" id="search-list-item18">
-            <ion-thumbnail item-left>
-              <img />
-            </ion-thumbnail>
-            <h2>
-              Item
-            </h2>
-          </ion-item>
-          <ion-item color="none" id="search-list-item19">
-            <ion-thumbnail item-left>
-              <img />
-            </ion-thumbnail>
-            <h2>
-              Item
-            </h2>
-          </ion-item>
+          <ion-list *ngFor="let item of data">
+            <ion-item color="none" id="search-list-item17" (click)="getDetail(item)">
+              <ion-thumbnail item-left>
+                <img />
+              </ion-thumbnail>
+              <h2>
+                {{item.name}}
+              </h2>
+            </ion-item>
+          </ion-list>
         </form>
       </div>
     </form>

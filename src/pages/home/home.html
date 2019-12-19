@@ -19,7 +19,7 @@
     </p>
   </div>
   <form id="home-form1">
-    <ion-searchbar placeholder="Nhập tên sân hoặc địa chỉ ..." name="" id="home-search1"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchKey"  placeholder="Nhập tên sân hoặc địa chỉ ..." name="searchKey"  id="home-search1"></ion-searchbar>
   </form>
   <button id="home-button4" ion-button block on-click="goToSearch()">
     Tìm ngay

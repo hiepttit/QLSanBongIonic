@@ -15,11 +15,9 @@ export class SearchPage {
     this.data = navParams.get('data');
   }
   OnInit() {
-    console.log(this.searchKey);
+    
   }
   async ionViewWillEnter() {
-    //let res = await this.pitchProvider.searchPitchByName(this.searchKey);
-    console.log(this.data);
 
   }
   private async getDetail(input) {

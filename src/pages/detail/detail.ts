@@ -13,10 +13,12 @@ export class DetailPage {
     this.data = navParams.get('data');
   }
   ionViewWillEnter(){
-    console.log(this.data);
+    //console.log(this.data);
     this.getListSmallPitch();
   }
   private async getListSmallPitch(){
+    console.log("run");
+    
     this.lstSmallPitch = await this.pitchProvider.getListSmallPitch(this.data.id);
   }
 }
