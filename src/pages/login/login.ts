@@ -13,16 +13,16 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController) {
   }
-  goToHome(params){
+  goToHome(params) {
     if (!params) params = {};
     this.navCtrl.push(HomePage);
-  }goToSearch(params){
+  } goToSearch(params) {
     if (!params) params = {};
     this.navCtrl.push(SearchPage);
-  }goToDetail(params){
+  } goToDetail(params) {
     if (!params) params = {};
     this.navCtrl.push(DetailPage);
-  }goToBooking(params){
+  } goToBooking(params) {
     if (!params) params = {};
     this.navCtrl.push(BookingPage);
   }

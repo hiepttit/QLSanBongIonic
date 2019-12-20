@@ -15,7 +15,7 @@ export class SearchPage {
     this.data = navParams.get('data');
   }
   OnInit() {
-    
+
   }
   async ionViewWillEnter() {
 

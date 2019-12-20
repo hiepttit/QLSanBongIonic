@@ -9,16 +9,16 @@ import { PitchProvider } from '../../providers/PitchProvider';
 export class DetailPage {
   private data;
   private lstSmallPitch;
-  constructor(public navCtrl: NavController,navParams: NavParams,public pitchProvider:PitchProvider) {
+  constructor(public navCtrl: NavController, navParams: NavParams, public pitchProvider: PitchProvider) {
     this.data = navParams.get('data');
   }
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     //console.log(this.data);
     this.getListSmallPitch();
   }
-  private async getListSmallPitch(){
+  private async getListSmallPitch() {
     console.log("run");
-    
+
     this.lstSmallPitch = await this.pitchProvider.getListSmallPitch(this.data.id);
   }
 }

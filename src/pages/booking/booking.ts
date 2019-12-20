@@ -9,5 +9,5 @@ export class BookingPage {
 
   constructor(public navCtrl: NavController) {
   }
-  
+
 }
