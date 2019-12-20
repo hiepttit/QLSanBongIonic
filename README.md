@@ -27,6 +27,13 @@ ionic cordova run android
 
 To design pages for Ionic project, you can using [it](https://creator.ionic.io/).
 
+To release Ionic App
+```
+ionic cordova run android --prod --release
+# or
+ionic cordova build android --prod --release
+```
+
 ## Yêu cầu
 
 ## Các phiên bản
