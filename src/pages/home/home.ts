@@ -30,7 +30,7 @@ export class HomePage {
     }
     goToBooking(params) {
         if (!params) params = {};
-        this.navCtrl.push(BookingPage);
+        this.navCtrl.push(BookingPage,{data:params});
     }
 
     async viewData() {

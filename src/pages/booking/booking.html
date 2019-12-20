@@ -45,23 +45,21 @@
   <h4 id="booking-heading11" style="color:#000000;">
     Chọn sân
   </h4>
-  <form id="booking-form7">
-    <img src="assets/img/dat-san-bong-da-ha-noi.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-    <ion-item id="booking-radio1">
-      <ion-label>
-        Sân 1
-      </ion-label>
-      <ion-radio></ion-radio>
-    </ion-item>
-    <img src="assets/img/dat-san-bong-da-ha-noi.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-    <ion-item id="booking-radio2">
-      <ion-label>
-        Sân 2
-      </ion-label>
-      <ion-radio></ion-radio>
-    </ion-item>
+  <!-- <form id="booking-form7" > -->
+    <ion-list radio-group [(ngModel)]="idSmallPitch" *ngFor="let item of lstOrder" >
+      <div (click)="chooseSmallPitch(item.id)">
+        <img src="{{item.thumnal}}"
+          style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+        <ion-item id="booking-radio2">
+          <ion-label>
+            {{item.name}}<ion-radio value="{{item.id}}" ></ion-radio>
+          </ion-label>
+        </ion-item>
+
+      </div>
+    </ion-list>
     <button id="booking-button8" ion-button color="positive" block>
       Đặt sân
     </button>
-  </form>
+  <!-- </form> -->
 </ion-content>
