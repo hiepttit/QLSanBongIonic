@@ -4,8 +4,37 @@ page-search {
             padding-left:0;
         }
         button{
-            margin-top:20px;
+            margin-top:10px;
             background-color:#33CD5F;
         }
+    }
+    ion-icon{
+        color: #33CD5F;
+    }
+    ion-card{
+        border:1px solid #f0f0f0;
+    }
+    .searchbar-md {
+        background: inherit;
+        padding: 8px;
+    }
+    .show-list-numbers-and-dots ion-icon{
+        color:#FFC83D;
+    }
+    ion-list ion-item:nth-child(2) {
+        border-top:1px solid #f0f0f0;
+        border-bottom:1px solid #f0f0f0;
+    }
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+        border-bottom: none;
+    }
+    ion-card.card{
+        margin-right: 0;
+        margin-left: 0;
+        width: auto;
+    }
+    ion-list ion-item:nth-child(2) ion-label{
+        display: flex;
+        justify-content: space-between;
     }
 }

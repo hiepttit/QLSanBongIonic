@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { DetailPage } from '../detail/detail';
 import { BookingPage } from '../booking/booking';
@@ -12,7 +12,7 @@ import { PitchProvider } from '../../providers/PitchProvider';
 export class HomePage {
     private searchKey: string = "";
     private lstBigPitch: any;
-    constructor(public navCtrl: NavController, public pitchProvider: PitchProvider) {
+    constructor(public navCtrl: NavController, public pitchProvider: PitchProvider,public loadingCtrl: LoadingController) {
         this.getFirstData();
     }
     async getFirstData() {
@@ -37,4 +37,13 @@ export class HomePage {
         let res = await this.pitchProvider.getListSmallPitch();
         console.log(res);
     }
+    presentLoadingDefault() {
+        let loading = this.loadingCtrl.create({
+          content: 'Please wait...'
+        });      
+        loading.present();      
+        setTimeout(() => {
+          loading.dismiss();
+        }, 5000);
+      }
 }

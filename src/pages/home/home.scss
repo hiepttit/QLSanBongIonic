@@ -17,7 +17,7 @@ page-home {
         .show-list-numbers-and-dots ion-icon{
             color:#FFC83D;
         }
-        .item-ios{
+        ion-list ion-item:nth-child(2) {
             border-top:1px solid #f0f0f0;
             border-bottom:1px solid #f0f0f0;
         }
@@ -32,6 +32,24 @@ page-home {
         ion-list ion-item:nth-child(2) ion-label{
             display: flex;
             justify-content: space-between;
+            
+        }
+        .searchbar-md {
+            padding:0;
+            margin-bottom: 10px;
+        }
+        .wrap-loading{
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+        }
+        ion-spinner {
+            width: 60px;
+            height: 60px;
+            circle {
+                stroke: #33CD5F;
+                stroke-dashoffset: 20;
+            }
         }
     }     
 
