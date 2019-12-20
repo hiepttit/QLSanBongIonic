@@ -19,29 +19,44 @@
   <h4 id="booking-heading10" style="color:#000000;">
     Chọn lịch
   </h4>
-  <form id="booking-form6">
+  <!-- <form id="booking-form6"> -->
     <ion-item id="booking-input4">
       <ion-label>
         Ngày đặt:
       </ion-label>
-      <ion-input type="date" placeholder=""></ion-input>
+      <ion-datetime displayFormat="D/MM/YYYY" [(ngModel)]="date"></ion-datetime>
     </ion-item>
     <ion-item id="booking-input5">
       <ion-label>
         Giờ nhận:
       </ion-label>
-      <ion-input type="time" placeholder=""></ion-input>
+      <ion-datetime displayFormat="hh:mm" [(ngModel)]="startTime"></ion-datetime>
     </ion-item>
     <ion-item id="booking-input6">
       <ion-label>
         Giờ trả:
       </ion-label>
-      <ion-input type="time" placeholder=""></ion-input>
+      <ion-datetime displayFormat="hh:mm" [(ngModel)]="endTime"></ion-datetime>
     </ion-item>
-    <button id="booking-button7" ion-button color="balanced" block>
+    <button id="booking-button7" ion-button color="balanced" block (click)="getListOrder()">
       Kiểm tra sân trống
     </button>
-  </form>
+  <!-- </form> -->
+  <div *ngIf="!(lstPitchFree==undefined||lstPitchFree.length==0)">
+    <ion-list  *ngFor="let item of lstPitchFree" >
+      <div (click)="chooseSmallPitch(item.id)">
+        <img src="{{item.thumnal}}"
+          style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+        <ion-item id="booking-radio2">
+          <ion-label>
+            {{item.name}}
+            <!-- <ion-radio value="{{item.id}}" ></ion-radio> -->
+          </ion-label>
+        </ion-item>
+
+      </div>
+    </ion-list>
+  </div>
   <h4 id="booking-heading11" style="color:#000000;">
     Chọn sân
   </h4>
